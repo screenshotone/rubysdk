@@ -34,9 +34,9 @@ And finally:
 ```rb
 # To simply get the final url:
 client.generate_take_url(options)
-=> https://api.screenshotone.com/take?url=https%3A%2F%2Fexample.com...
+=> "https://api.screenshotone.com/take?url=https%3A%2F%2Fexample.com..."
 
-# To actually get the image
+# To actually get the image (pending method)
 client.take(options)
 
 ```
