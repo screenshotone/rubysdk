@@ -4,11 +4,11 @@ Gem::Specification.new do |spec|
   spec.name          = "screenshot_one_api"
   spec.version       = ScreenshotOneApi::VERSION
   spec.authors       = ["Gustavo Garcia"]
-  spec.email         = ["gustavo@dailytics.com"]
+  spec.email         = ["tavo@hey.com"]
 
   spec.summary       = 'A simple ScreenshotOne API wrapper for Ruby'
   spec.description   = 'A very humble wrapper for the ScreenshotOne API.'
-  spec.homepage      = "https://github.com/luctus/screenshotone_api"
+  spec.homepage      = "https://github.com/luctus/screenshot_one_api"
   spec.license       = "MIT"
   spec.required_ruby_version = Gem::Requirement.new(">= 2.3.0")
 

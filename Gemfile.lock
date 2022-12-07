@@ -1,21 +1,21 @@
 PATH
   remote: .
   specs:
-    screenshot_one (0.0.1)
+    screenshot_one_api (0.0.1)
 
 GEM
   remote: https://rubygems.org/
   specs:
-    minitest (5.14.4)
-    rake (12.3.3)
+    minitest (5.16.3)
+    rake (13.0.6)
 
 PLATFORMS
   ruby
 
 DEPENDENCIES
-  minitest (~> 5.0)
-  plausible_api!
-  rake (~> 12.0)
+  minitest (~> 5.16.3)
+  rake (~> 13.0.6)
+  screenshot_one_api!
 
 BUNDLED WITH
-   2.1.4
+   2.3.26
