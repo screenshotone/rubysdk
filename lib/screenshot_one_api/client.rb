@@ -31,9 +31,10 @@ module ScreenshotOneApi
     end
 
     def take(options)
-      url = generate_take_url(options)
-
-      url
+      uri = URI.parse(generate_take_url(options))
+      res = Net::HTTP.get_response(uri)
+      return res.body if res.is_a?(Net::HTTPSuccess)
+      raise Error.new(res.body)
     end
 
   end
