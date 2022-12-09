@@ -3,18 +3,18 @@ require_relative 'lib/screenshot_one_api/version'
 Gem::Specification.new do |spec|
   spec.name          = "screenshot_one_api"
   spec.version       = ScreenshotOneApi::VERSION
-  spec.authors       = ["Gustavo Garcia"]
-  spec.email         = ["tavo@hey.com"]
+  spec.authors       = ["Gustavo Garcia", "Dmytro Krasun"]
+  spec.email         = ["tavo@hey.com", "krasun"]
 
   spec.summary       = 'A simple ScreenshotOne API wrapper for Ruby'
   spec.description   = 'A very humble wrapper for the ScreenshotOne API.'
-  spec.homepage      = "https://github.com/luctus/screenshot_one_api"
+  spec.homepage      = "https://github.com/screenshotone/rubysdk"
   spec.license       = "MIT"
   spec.required_ruby_version = Gem::Requirement.new(">= 2.3.0")
 
   spec.metadata["homepage_uri"] = spec.homepage
-  spec.metadata["source_code_uri"] = "https://github.com/luctus/screenshot_one_api"
-  spec.metadata["changelog_uri"] = "https://github.com/luctus/screenshot_one_api"
+  spec.metadata["source_code_uri"] = spec.homepage
+  spec.metadata["changelog_uri"] = spec.homepage
 
   # Specify which files should be added to the gem when it is released.
   # The `git ls-files -z` loads the files in the RubyGem that have been added into git.

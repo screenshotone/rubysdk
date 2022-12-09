@@ -12,12 +12,16 @@ Then you need to initialize a Client with your `access_key` and an optional `sec
 (in case you want sign all the request for publicly sharing the urls).
 
 ```rb
-client = ScreenshotOneApi::Client.new('dailytics.com', '123123')
+# If you don't need to add a signature
+client = ScreenshotOneApi::Client.new('my_access_key')
+
+# If you do need to add a signature
+client = ScreenshotOneApi::Client.new('my_access_key', 'my_secret_key')
 ```
 
 Now you need to define the options of the screenshot
 ```rb
-# You can set any available option, in a camel_case format
+# You can set any available option, in a camel_case format, for example:
 options = ScreenshotOneApi::TakeOptions.new(url: 'https://example.com').
             full_page(true).
             delay(2).
@@ -25,7 +29,8 @@ options = ScreenshotOneApi::TakeOptions.new(url: 'https://example.com').
             geolocation_longitude(2.294677).
             geolocation_accuracy(50)
 
-# Verify all the parameters are valid
+# Verify all the parameters are valid (we will validate the parameters that should be
+# numeric, booleans or that accept only certain values)
 options.valid?
 => true
 ```
@@ -36,9 +41,9 @@ And finally:
 client.generate_take_url(options)
 => "https://api.screenshotone.com/take?url=https%3A%2F%2Fexample.com..."
 
-# To actually get the image (pending method)
+# To actually get the image (the response body of a request to the previous url)
 client.take(options)
-
+=> "\xFF\xD8\xFF\xE0\x00\x10JFIF\x00\x01\x01\x00\x00\x01\x00\x01\x00\x00\xFF\..."
 ```
 
 ## Development
@@ -49,7 +54,7 @@ To install this gem onto your local machine, run `bundle exec rake install`. To 
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/luctus/screenshot_one_api. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [code of conduct](https://github.com/luctus/screenshot_one_api/blob/main/CODE_OF_CONDUCT.md).
+Bug reports and pull requests are welcome on GitHub at https://github.com/screenshotone/rubysdk. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [code of conduct](https://github.com/screenshotone/rubysdk/blob/main/CODE_OF_CONDUCT.md).
 
 
 ## License
@@ -58,4 +63,4 @@ The gem is available as open source under the terms of the [MIT License](https:/
 
 ## Code of Conduct
 
-Everyone interacting in the PlausibleApi project's codebases, issue trackers, chat rooms and mailing lists is expected to follow the [code of conduct](https://github.com/luctus/screenshot_one_api/blob/main/CODE_OF_CONDUCT.md).
+Everyone interacting in the PlausibleApi project's codebases, issue trackers, chat rooms and mailing lists is expected to follow the [code of conduct](https://github.com/screenshotone/rubysdk/blob/main/CODE_OF_CONDUCT.md).
