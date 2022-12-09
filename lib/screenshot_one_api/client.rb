@@ -23,7 +23,6 @@ module ScreenshotOneApi
       query[:access_key] = @access_key
       query_string = URI.encode_www_form(query)
       if @secret_key
-        puts "Secret key: #{@secret_key}"
         query_string << "&signature=#{OpenSSL::HMAC.hexdigest("sha256", @secret_key, query_string)}"
       end
 
