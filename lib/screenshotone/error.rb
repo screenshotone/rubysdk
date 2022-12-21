@@ -1,4 +1,4 @@
-module ScreenshotOneApi
+module ScreenshotOne
   class Error < StandardError
   end
 end

@@ -5,7 +5,7 @@ It's based on the [API guide](https://screenshotone.com/docs/getting-started/)
 ## Usage
 Add this gem to your Gemfile:
 ```rb
-gem 'screenshot_one_api'
+gem 'screenshotone'
 ```
 
 Then you need to initialize a Client with your `access_key` and an optional `secret_key`
@@ -13,16 +13,16 @@ Then you need to initialize a Client with your `access_key` and an optional `sec
 
 ```rb
 # If you don't need to add a signature
-client = ScreenshotOneApi::Client.new('my_access_key')
+client = ScreenshotOne::Client.new('my_access_key')
 
 # If you do need to add a signature
-client = ScreenshotOneApi::Client.new('my_access_key', 'my_secret_key')
+client = ScreenshotOne::Client.new('my_access_key', 'my_secret_key')
 ```
 
 Now you need to define the options of the screenshot
 ```rb
 # You can set any available option, in a camel_case format, for example:
-options = ScreenshotOneApi::TakeOptions.new(url: 'https://example.com').
+options = ScreenshotOne::TakeOptions.new(url: 'https://example.com').
             full_page(true).
             delay(2).
             geolocation_latitude(48.857648).
@@ -55,7 +55,6 @@ To install this gem onto your local machine, run `bundle exec rake install`. To 
 ## Contributing
 
 Bug reports and pull requests are welcome on GitHub at https://github.com/screenshotone/rubysdk. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [code of conduct](https://github.com/screenshotone/rubysdk/blob/main/CODE_OF_CONDUCT.md).
-
 
 ## License
 

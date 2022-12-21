@@ -5,7 +5,7 @@ require "net/http"
 require "uri"
 require "cgi"
 
-module ScreenshotOneApi
+module ScreenshotOne
   class Client
 
     BASE_URL = "https://api.screenshotone.com"
@@ -16,7 +16,7 @@ module ScreenshotOneApi
     end
 
     def generate_take_url(options)
-      raise Error.new('Argument is not a ScreenshotOneApi::TakeOptions instance') unless options.is_a?(TakeOptions)
+      raise Error.new('Argument is not a ScreenshotOne::TakeOptions instance') unless options.is_a?(TakeOptions)
       raise Error.new('TakeOptions is not valid') unless options.valid?
 
       query = options.to_hash

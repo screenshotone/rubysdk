@@ -1,10 +1,10 @@
-require_relative 'lib/screenshot_one_api/version'
+require_relative 'lib/screenshotone/version'
 
 Gem::Specification.new do |spec|
-  spec.name          = "screenshot_one_api"
-  spec.version       = ScreenshotOneApi::VERSION
+  spec.name          = "screenshotone"
+  spec.version       = ScreenshotOne::VERSION
   spec.authors       = ["Gustavo Garcia", "Dmytro Krasun"]
-  spec.email         = ["tavo@hey.com", "krasun"]
+  spec.email         = ["tavo@hey.com", "support@screenhotone.com"]
 
   spec.summary       = 'A simple ScreenshotOne API wrapper for Ruby'
   spec.description   = 'A very humble wrapper for the ScreenshotOne API.'

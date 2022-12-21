@@ -1,4 +1,4 @@
-module ScreenshotOneApi
+module ScreenshotOne
   class TakeOptions
 
     OPTIONS = [

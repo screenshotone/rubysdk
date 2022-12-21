@@ -2,8 +2,8 @@ require "test_helper"
 
 class ScreenshotOneApiClientTest < Minitest::Test
   def test_generate_take_url
-    client = ScreenshotOneApi::Client.new('access_key', 'secret_key')
-    options = ScreenshotOneApi::TakeOptions.new(url: "https://example.com").
+    client = ScreenshotOne::Client.new('access_key', 'secret_key')
+    options = ScreenshotOne::TakeOptions.new(url: "https://example.com").
               full_page(true).
               delay(2).
               geolocation_latitude(48.857648).

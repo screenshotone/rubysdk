@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    screenshot_one_api (0.0.1)
+    screenshotone (0.0.1)
 
 GEM
   remote: https://rubygems.org/
@@ -15,7 +15,7 @@ PLATFORMS
 DEPENDENCIES
   minitest (~> 5.16.3)
   rake (~> 13.0.6)
-  screenshot_one_api!
+  screenshotone!
 
 BUNDLED WITH
    2.3.26
